@@ -1,0 +1,14 @@
+.container{
+    height: 475px;
+    width: 475px;
+    .card{
+        height: calc(33.3333333333333333% ) ;
+        width: calc(33.33333333333333333% - 4px);
+        display: inline-block;
+        margin-right: 4px;
+        background-color: #ffff;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
