@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+$background-color : #16202c;
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: $background-color;
+}
