@@ -1,14 +1,55 @@
 .container{
     height: 475px;
     width: 475px;
+    position: relative;
     .card{
         height: calc(33.3333333333333333% ) ;
         width: calc(33.33333333333333333% - 4px);
         display: inline-block;
         margin-right: 4px;
-        background-color: #ffff;
+        background-color: #034e65;
+        text-align: center;
         &:hover{
             cursor: pointer;
         }
+    }
+    .cardX::before{
+        content:'X';
+        z-index: 1000;
+        position : absolute;
+        font-size: 6em;
+        left: 30%;
+        color: #bedb39;
+        font-weight: 700;
+        text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
+        animation-name: ElementAdd;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+
+    }
+    .cardO::before{
+        content:'O';
+        z-index: 1000;
+        position : absolute;
+        font-size: 6em;
+        left: 28%;
+        color:#fd7400;
+        font-weight: 700;
+        text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
+        animation-name: ElementAdd;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+    }    
+}
+
+@keyframes ElementAdd{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
     }
 }
