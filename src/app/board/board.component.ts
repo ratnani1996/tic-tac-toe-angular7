@@ -38,13 +38,12 @@ export class BoardComponent implements OnInit {
         //update scores of the current player
         this.currentPlayer == Players.playerX ? this.scoreX += 1 : this.scoreO += 1;
         this.disabled = true;
+        this.moves = 0;
       }
       else if(this.isDraw()){
         this.draws += 1;
       }
-      else{
-        this.FlipPlayers();
-      }
+      this.FlipPlayers();
       
     }
   }
@@ -121,6 +120,7 @@ export class BoardComponent implements OnInit {
     this.playerXPosition = [];
     this.playerOPosition = [];
     this.disabled = false;
+    this.moves = 0;
   }
   Allocated(currentCard : number) :boolean{
     //returns true if currentCard is already allocated
