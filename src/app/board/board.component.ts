@@ -11,6 +11,7 @@ export class BoardComponent implements OnInit {
   playerXPosition : number[] = [];
   playerOPosition : number[] = [];
   moves : number = 0;
+  disabled : boolean = false;
   public scoreX : number = 0;
   public scoreO : number = 0;
   public draws : number = 0; 
@@ -36,11 +37,10 @@ export class BoardComponent implements OnInit {
       if(this.CheckIfWon()){
         //update scores of the current player
         this.currentPlayer == Players.playerX ? this.scoreX += 1 : this.scoreO += 1;
-        if(this.isDraw()){
-          this.draws += 1;
-        }
-        //reset the game
-        this.ResetGame();
+        this.disabled = true;
+      }
+      else if(this.isDraw()){
+        this.draws += 1;
       }
       else{
         this.FlipPlayers();
@@ -120,6 +120,7 @@ export class BoardComponent implements OnInit {
     this.currentPlayer = Players.playerX;
     this.playerXPosition = [];
     this.playerOPosition = [];
+    this.disabled = false;
   }
   Allocated(currentCard : number) :boolean{
     //returns true if currentCard is already allocated

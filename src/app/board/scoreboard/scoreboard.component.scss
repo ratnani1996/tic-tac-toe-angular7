@@ -1,0 +1,52 @@
+.score{
+    display: inline-block;
+    color: white;
+    width: calc(33.33333333333333% - 10px);
+    text-align: center;
+    margin-top: 10px;
+    background-color: #034e65;
+    font-size: 2em;
+    margin-right: 10px;
+    border-radius: 10px;
+    span.X{
+        color: #bedb39;
+        font-weight: 700;
+        text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
+        font-size: 1.5em;
+        position: relative;
+        left: -15px;
+    }
+    span.O{
+        color:#fd7400;
+        font-weight: 700;
+        text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
+        font-size: 1.5em;
+        position: relative;
+        left: 15px;
+    }
+    span.scoreX{
+        position: relative;
+        left: 20px;
+        line-height: 0.2;
+        top: -4px;
+    }
+    span.scoreO{
+        position: relative;
+        left: -20px;
+        line-height: 0.2;
+        top: -4px;
+    }
+    &.active{
+        border : 5px solid #d7cb0b;
+        box-shadow: 1px 1px 10px 0px rgba(#d7cb0b, 0.7);
+    }
+}
+
+.score:nth-child(2){
+    transform: translateY(-8px);
+    padding: 12px 0px 12px 0px;
+    & span.draws{
+        position: relative;
+        left: 5px;
+    }
+}

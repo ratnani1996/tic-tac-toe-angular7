@@ -1,3 +1,12 @@
-<p>
-  scoreboard works!
-</p>
+<div class="score" [class.active] = "currentPlayer == 0">
+  <span class="X">X</span>
+  <span class="scoreX">{{scoreX}}</span>
+</div>
+<div class="score">
+  <span>Draws</span>
+  <span class="draws">{{draws}}</span>
+</div>
+<div class="score" [class.active] = "currentPlayer == 1">
+  <span class="scoreO">{{scoreO}}</span>
+  <span class="O">O</span>
+</div>

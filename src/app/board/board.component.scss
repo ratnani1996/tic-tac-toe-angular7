@@ -39,7 +39,21 @@
         animation-name: ElementAdd;
         animation-duration: 0.3s;
         animation-timing-function: ease-in-out;
+    }
+    button{
+        position: absolute;
+        left: 120%;
+        top: 50%;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 2em;
+        background-color: #034e65;
+        color: white;
     }    
+}
+
+.disabled{
+    pointer-events: none !important;
 }
 
 @keyframes ElementAdd{
